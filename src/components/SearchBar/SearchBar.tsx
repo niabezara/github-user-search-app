@@ -1,4 +1,4 @@
-import { Users } from "../userInterface";
+import { Users } from "../../userInterface";
 import Searchstyle from "./SearchBar.module.css";
 export default function SearchBar({
   user,

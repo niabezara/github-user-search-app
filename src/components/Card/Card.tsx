@@ -1,7 +1,7 @@
 import styles from "./card.module.css";
-import Subsection from "./Subsection";
-import Footer from "./Footer";
-import { Users } from "../userInterface";
+import Subsection from "../SubSection/Subsection";
+import Footer from "../Footer/Footer";
+import { Users } from "../../userInterface";
 
 export default function Card({
   user,

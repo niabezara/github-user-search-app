@@ -1,5 +1,5 @@
 import subStyles from "./Subsection.module.css";
-import { Users } from "../userInterface";
+import { Users } from "../../userInterface";
 export default function Subsection({
   user,
   dark,

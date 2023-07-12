@@ -1,4 +1,4 @@
-import { Users } from "../userInterface";
+import { Users } from "../../userInterface";
 import fooStyles from "./Footer.module.css";
 export default function Footer({
   user,
