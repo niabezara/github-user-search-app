@@ -10,7 +10,7 @@
   gap: 5px;
 }
 .searchBar {
-  background-image: url("../../../public/icon-search.svg");
+  background-image: url("./icon-search.svg");
   background-repeat: no-repeat;
   background-position: 5px center;
   color: #fff;
