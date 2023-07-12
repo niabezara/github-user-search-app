@@ -57,7 +57,7 @@
 .lightinput {
   background-color: #fefefe;
   border: none;
-  background-image: url(../public/icon-search.svg);
+  background-image: url("../../../public/icon-search.svg");
   background-repeat: no-repeat;
   background-position: 5px center;
   border-radius: 15px;
