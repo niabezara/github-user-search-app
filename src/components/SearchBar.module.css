@@ -7,9 +7,10 @@
   padding: 0.6rem;
   margin-bottom: 1.6rem;
   text-align: center;
+  gap: 5px;
 }
 .searchBar {
-  background-image: url(../public/icon-search.svg);
+  background-image: url(../image/icon-search.svg);
   background-repeat: no-repeat;
   background-position: 5px center;
   color: #fff;

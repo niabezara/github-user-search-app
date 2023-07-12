@@ -15,7 +15,9 @@ export default function Mode({
       </h1>
       <div>
         <div className={modestyles.mode}>
-          <p className={modestyles.darkmode_theme}>{dark ? "DARK" : "LIGHT"}</p>
+          <p className={modestyles.darkmode_theme} onClick={toggle}>
+            {dark ? "DARK" : "LIGHT"}
+          </p>
           <img
             className={modestyles.modeicons}
             src={dark ? "/icon-moon.svg" : "/icon-sun.svg"}

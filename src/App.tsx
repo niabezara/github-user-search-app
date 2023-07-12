@@ -18,19 +18,23 @@ function App() {
     })();
   }, []);
 
-  const handleButtonClick = async () => {
+  const handleSearch = async () => {
     const response = await fetch(`https://api.github.com/users/${value}`);
-    console.log(response);
     if (response.ok) {
       const user = await response.json();
       setUser(user);
     } else {
-      console.log("hi");
       setUser(null);
     }
   };
   const toggle = () => {
     setDark(!dark);
+  };
+
+  const handleKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
   };
 
   return (
@@ -41,8 +45,9 @@ function App() {
           user={user}
           value={value}
           dark={dark}
-          handleButtonClick={handleButtonClick}
+          handleSearch={handleSearch}
           setValue={setValue}
+          handleKey={handleKey}
         />
         <Card user={user} value={value} dark={dark} />
       </div>

@@ -3,14 +3,16 @@ import Searchstyle from "./SearchBar.module.css";
 export default function SearchBar({
   user,
   dark,
-  handleButtonClick,
+  handleSearch,
+  handleKey,
   setValue,
 }: {
   value: string;
   user: Users | null;
   dark: boolean;
   setValue: any;
-  handleButtonClick: () => Promise<void>;
+  handleKey: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+  handleSearch: () => Promise<void>;
 }) {
   return (
     <div
@@ -22,10 +24,11 @@ export default function SearchBar({
         className={dark ? Searchstyle.lightinput : Searchstyle.searchBar}
         type="text"
         onChange={(e) => setValue(e.target.value)}
+        onKeyDown={(e) => handleKey(e)}
         placeholder="Search GitHub username…"
       />
       {user == null ? <p className={Searchstyle.error}>No results</p> : null}
-      <button className={Searchstyle.search} onClick={handleButtonClick}>
+      <button className={Searchstyle.search} onClick={handleSearch}>
         Search
       </button>
     </div>
