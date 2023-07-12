@@ -3,6 +3,14 @@
   background: #1e2a47;
   padding: 3.3rem 2.4rem;
   width: 100%;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+}
+.lightmode {
+  border-radius: 15px;
+  padding: 3.3rem 2.4rem;
+  width: 100%;
+  background: #fefefe;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
 }
 .avatarpic {
   border-radius: 50%;
@@ -33,22 +41,7 @@ p {
   font-weight: 400;
   line-height: 25px;
 }
-.subsection {
-  border-radius: 10px;
-  background: #141d2f;
-  display: flex;
-  justify-content: space-between;
-  padding: 1.8rem 1.5rem;
-  margin-top: 2.3rem;
-  text-align: center;
-}
-.followers {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: uppercase;
-}
+
 .avatarsection {
   display: flex;
   margin-bottom: 3.4rem;
@@ -56,50 +49,6 @@ p {
 
 .userinfo {
   margin-left: 1.9rem;
-}
-.icons {
-  display: flex;
-  gap: 19.247px;
-  margin-top: 1.7rem;
-  text-decoration: none;
-}
-.icons:hover {
-  cursor: pointer;
-  text-decoration-line: underline;
-}
-.grayText {
-  color: #8e94a3;
-}
-
-.notavailable {
-  filter: opacity(0.5);
-}
-.lightmodeimg {
-  fill: rgba(75, 106, 155, 1);
-}
-
-.lightmode {
-  background-color: #fefefe;
-  /* box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2); */
-  border-radius: 15px;
-  padding: 3.3rem 2.4rem;
-  width: 100%;
-}
-.lightmodesub {
-  border-radius: 10px;
-  background-color: #f6f8ff;
-  display: flex;
-  justify-content: space-between;
-  padding: 1.8rem 1.5rem;
-  margin-top: 2.3rem;
-  text-align: center;
-}
-
-@media screen and (min-width: 553px) {
-  .iconsection {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media screen and (min-width: 730px) {
@@ -112,30 +61,5 @@ p {
     display: flex;
   }
 }
-@media (prefers-color-scheme: light) {
-  .lightmodeimg {
-    fill: rgba(75, 106, 155, 1);
-  }
-
-  .lightmode {
-    background-color: #fefefe;
-    /* box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2); */
-    border-radius: 15px;
-    padding: 3.3rem 2.4rem;
-    width: 100%;
-  }
-  .lightmodesub {
-    border-radius: 10px;
-    background-color: #f6f8ff;
-    display: flex;
-    justify-content: space-between;
-    padding: 1.8rem 1.5rem;
-    margin-top: 2.3rem;
-    text-align: center;
-  }
-  .lightLoginName {
-    color: rgba(43, 52, 66, 1);
-    font-size: 16px;
-    font-weight: 700;
-  }
-}
+/* @media (prefers-color-scheme: light) {
+} */

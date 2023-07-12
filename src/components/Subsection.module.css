@@ -1,0 +1,25 @@
+.subsection {
+  border-radius: 10px;
+  background: #141d2f;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.8rem 1.5rem;
+  margin-top: 2.3rem;
+  text-align: center;
+}
+.followers {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.lightmodesub {
+  border-radius: 10px;
+  background-color: #f6f8ff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.8rem 1.5rem;
+  margin-top: 2.3rem;
+  text-align: center;
+}

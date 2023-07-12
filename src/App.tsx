@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { Users } from "./userInterface";
 import Card from "./components/Card";
+import SearchBar from "./components/SearchBar";
+import Mode from "./Mode";
 
 function App() {
   const [user, setUser] = useState<null | Users>(null);
@@ -34,31 +36,14 @@ function App() {
   return (
     <div className={dark ? "headerContainer-lightmode" : "headerContainer"}>
       <div className={dark ? "Container lightmode" : "Container"}>
-        <div className="dev">
-          <h1 className={dark ? "lightdevfinder" : "devfinder"}>devfinder</h1>
-          <div>
-            <div className="mode">
-              <p className="darkmode theme">{dark ? "DARK" : "LIGHT"}</p>
-              <img
-                src={dark ? "/icon-moon.svg" : "/icon-sun.svg"}
-                alt=""
-                onClick={toggle}
-              />
-            </div>
-          </div>
-        </div>
-        <div className={dark ? "lightsearchsection" : "searchSection"}>
-          <input
-            className={dark ? "lightinput" : "searchBar"}
-            type="text"
-            onChange={(e) => setValue(e.target.value)}
-            placeholder="Search GitHub username…"
-          />
-          {user == null ? <p className="error">No results</p> : null}
-          <button className="search" onClick={handleButtonClick}>
-            Search
-          </button>
-        </div>
+        <Mode toggle={toggle} dark={dark} setDark={setDark} />
+        <SearchBar
+          user={user}
+          value={value}
+          dark={dark}
+          handleButtonClick={handleButtonClick}
+          setValue={setValue}
+        />
         <Card user={user} value={value} dark={dark} />
       </div>
     </div>

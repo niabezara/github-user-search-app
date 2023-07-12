@@ -1,4 +1,6 @@
 import styles from "./card.module.css";
+import Subsection from "./Subsection";
+import Footer from "./Footer";
 import { Users } from "../userInterface";
 
 export default function Card({
@@ -9,28 +11,6 @@ export default function Card({
   user: Users | null;
   dark: boolean;
 }) {
-  const sections = [
-    {
-      icondark: "/icon-location.svg",
-      iconlight: "/icon-location-light.svg",
-      text: user?.location || "Not Available",
-    },
-    {
-      icondark: "/icon-website.svg",
-      iconlight: "/website-lightmode.svg",
-      text: user?.blog || "Not Available",
-    },
-    {
-      icondark: "/icon-twitter.svg",
-      iconlight: "/twitter-lightmode.svg",
-      text: user?.twitter_username || "Not Available",
-    },
-    {
-      icondark: "/icon-company.svg",
-      iconlight: "/company-lightmode.svg",
-      text: user?.company || "Not Available",
-    },
-  ];
   const months = [
     "Jan",
     "Feb",
@@ -70,44 +50,8 @@ export default function Card({
       <p className={styles.bio}>
         {user?.bio ? user?.bio : "This profile has no bio."}
       </p>
-      <div className={dark ? styles.lightmodesub : styles.subsection}>
-        <article>
-          <p>Repos</p>
-          <p className={styles.followers}>{user?.public_repos}</p>
-        </article>
-        <article>
-          <p>Followers</p>
-          <p className={styles.followers}>{user?.followers}</p>
-        </article>
-        <article>
-          <p>Following</p>
-          <p className={styles.followers}>{user?.following}</p>
-        </article>
-      </div>
-      <div>
-        <section className={styles.iconsection}>
-          {sections.map((item, index) => {
-            return (
-              <section className={styles.icons} key={index}>
-                <img
-                  src={!dark ? item.icondark : item.iconlight}
-                  alt=""
-                  className={
-                    item.text === "Not Available" ? styles.notavailable : ""
-                  }
-                />
-                <p
-                  className={
-                    item.text === "Not Available" ? styles.grayText : ""
-                  }
-                >
-                  {item.text}
-                </p>
-              </section>
-            );
-          })}
-        </section>
-      </div>
+      <Subsection user={user} dark={dark} value={""} />
+      <Footer user={user} dark={dark} value={""} />
     </div>
   );
 }
